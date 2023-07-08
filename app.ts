@@ -13,6 +13,3 @@ app.use("/api/v1", urlShortenerRoutes)
 const PORT = process.env.APP_PORT
 
 app.listen(PORT, () => console.log(`App listening on port ${PORT}`));
-
-// mongodb username = admin
-// mongodb password = kBTVYWP30hzba5TZ
