@@ -2,10 +2,10 @@
   "name": "url-shortener",
   "version": "1.0.0",
   "description": "a url shortner api",
-  "main": "app.js",
+  "main": "src/App.ts",
   "scripts": {
     "test": "test",
-    "start": "nodemon app.ts"
+    "start": "nodemon src/App.ts"
   },
   "keywords": [
     "url",
@@ -16,18 +16,18 @@
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^4.17.17",
+    "@types/nanoid": "^3.0.0",
     "@types/node": "^20.4.0",
-    "@types/shortid": "^0.0.29",
     "express": "^4.18.2",
     "nodemon": "^2.0.22",
-    "shortid": "^2.2.16",
-    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.1.6"
   },
   "dependencies": {
     "@types/cors": "^2.8.13",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "mongoose": "^7.3.2"
+    "mongoose": "^7.3.2",
+    "nanoid": "^3.3.6"
   }
 }
