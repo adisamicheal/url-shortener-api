@@ -1,5 +1,7 @@
-const utils = {
-  validateUrl: (value: string) => {
+import { Utils_Types } from "../Types";
+
+const utils: Utils_Types = {
+  validate_Url: (value: string) => {
     var urlPattern = new RegExp(
       "^(https?:\\/\\/)?" + // validate protocol
         "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // validate domain name
