@@ -1,8 +1,12 @@
+import { Shorten_Url_Service_Types } from "../Types";
 import Shorten_Url_Model, { Url_Doc_Type } from "../models/Su.Model";
 
-const Shorten_Url_Service = {
+const Shorten_Url_Service: Shorten_Url_Service_Types = {
   Create_Url: async (Orginal_Url: string, Shortend_Id: string) => {
     try {
+      const recycle_Url: [{}, Url_Doc_Type][] | any =
+        await Shorten_Url_Model.find({ origin_Url: Orginal_Url });
+      if (recycle_Url) return `localhost:3000/${recycle_Url.shortned_Url_Id}`; //save db space by using already used urls
       await Shorten_Url_Model.create({
         origin_Url: Orginal_Url,
         shortned_Url_Id: Shortend_Id,
