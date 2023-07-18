@@ -2,5 +2,5 @@
   "watch": ["*"],
   "ext": ".ts,.js",
   "ignore": [],
-  "exec": "npx ts-node app.ts"
+  "exec": "npx tsnd --respawn src/App.ts"
 }
